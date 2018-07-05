@@ -4,6 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'javac Main.java'
+        input 'Building is ready, would like to continue?'
       }
     }
     stage('Execute') {
