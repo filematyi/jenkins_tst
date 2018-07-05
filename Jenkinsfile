@@ -37,7 +37,7 @@ pipeline {
         archiveArtifacts(artifacts: '*.jar', fingerprint: true)
       }
     }
-    stage('') {
+    stage('Build Job') {
       steps {
         build 'tst_2'
       }
