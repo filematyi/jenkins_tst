@@ -4,17 +4,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                sh 'javac Main.java'
             }
         }
-        stage('Test') {
+        stage('Execute') {
             steps {
-                echo 'Testing..'
+                sh 'java Main'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                sh 'jar cvf Main.jar *'
             }
         }
     }
