@@ -33,10 +33,15 @@ pipeline {
       }
     }
     stage('Build Job') {
+      environment {
+        string_parameter = '12'
+      }
       steps {
-        input(message: 'addj parametert', id: 'string_value', ok: 'mehet')
         build(job: 'tst_2', propagate: true, wait: true)
       }
     }
+  }
+  environment {
+    string_parameter = '"Hello"'
   }
 }
