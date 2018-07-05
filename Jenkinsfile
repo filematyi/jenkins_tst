@@ -23,6 +23,11 @@ pipeline {
             sh 'echo "secondLog"'
           }
         }
+        stage('') {
+          steps {
+            sh 'input \'Are you sure?\''
+          }
+        }
       }
     }
     stage('Deploy') {
