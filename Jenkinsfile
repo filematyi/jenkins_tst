@@ -23,9 +23,9 @@ pipeline {
             sh 'echo "secondLog"'
           }
         }
-        stage('Iput message') {
+        stage('inputter') {
           steps {
-            echo 'input id: \'Approve\', message: \'Approve\', ok: \'yes\''
+            input(message: 'Menni vagy nem menni?', id: '1', ok: 'yes')
           }
         }
       }
