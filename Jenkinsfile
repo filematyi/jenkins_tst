@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Logging_2') {
           steps {
-            sh 'sh "echo secondLog"'
+            sh 'echo "secondLog"'
           }
         }
       }
