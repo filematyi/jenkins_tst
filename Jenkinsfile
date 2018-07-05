@@ -15,6 +15,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh 'jar cvf Main.jar *'
+                archiveArtifacts artifacts: '*.jar', fingerprint: true 
             }
         }
     }
