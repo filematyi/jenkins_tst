@@ -24,11 +24,6 @@ pipeline {
             sh 'echo "secondLog"'
           }
         }
-        stage('inputter') {
-          steps {
-            input(message: 'Menni vagy nem menni?', id: '1', ok: 'Menni')
-          }
-        }
       }
     }
     stage('Deploy') {
@@ -39,6 +34,7 @@ pipeline {
     }
     stage('Build Job') {
       steps {
+        input(message: 'addj parametert', id: 'string_value', ok: 'mehet')
         build(job: 'tst_2', propagate: true, wait: true)
       }
     }
