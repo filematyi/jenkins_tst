@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'javac Main.java'
-        input 'Building is ready, would like to continue?'
+        input(message: 'Building is ready, would like to continue?', ok: 'Continue')
       }
     }
     stage('Execute') {
@@ -26,7 +26,7 @@ pipeline {
         }
         stage('inputter') {
           steps {
-            input(message: 'Menni vagy nem menni?', id: '1', ok: 'yes')
+            input(message: 'Menni vagy nem menni?', id: '1', ok: 'Menni')
           }
         }
       }
