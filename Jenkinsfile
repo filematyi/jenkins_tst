@@ -8,8 +8,10 @@ pipeline {
             }
         }
         stage('Execute') {
-            steps {
+            parallel Executing: {
                 sh 'java Main'
+            }, Logging: {
+                sh 'echo "Is is working"'
             }
         }
         stage('Deploy') {
