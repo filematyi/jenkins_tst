@@ -25,7 +25,7 @@ pipeline {
         }
         stage('Iput message') {
           steps {
-            echo 'Are You sure?'
+            echo 'input id: \'Approve\', message: \'Approve\', ok: \'yes\''
           }
         }
       }
