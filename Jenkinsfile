@@ -23,9 +23,9 @@ pipeline {
             sh 'echo "secondLog"'
           }
         }
-        stage('') {
+        stage('Iput message') {
           steps {
-            sh 'input \'Are you sure?\''
+            echo 'Are You sure?'
           }
         }
       }
