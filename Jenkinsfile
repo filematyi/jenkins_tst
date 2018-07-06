@@ -39,6 +39,7 @@ pipeline {
       steps {
         build 'tst_2'
         sh 'env'
+        sh 'export string_parameter=10'
       }
     }
   }
