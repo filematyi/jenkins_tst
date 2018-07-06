@@ -38,7 +38,7 @@ pipeline {
       }
       steps {
         sh 'export string_parameter=10'
-        build job: 'tst_2', parameters: [string(string_parameter: 'hello baz megye')]
+        build 'tst_2'
         sh 'env'
       }
     }
