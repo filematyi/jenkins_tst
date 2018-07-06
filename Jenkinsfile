@@ -38,6 +38,7 @@ pipeline {
       }
       steps {
         build(job: 'tst_2', propagate: true, wait: true)
+        sh 'env'
       }
     }
   }
