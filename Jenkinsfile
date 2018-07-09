@@ -32,10 +32,17 @@ pipeline {
         archiveArtifacts(artifacts: '*.jar', fingerprint: true)
       }
     }
-    stage('Build a joba') {
+    stage('Build a job') {
+      agent any
+      environment {
+        string_parameter = 'aassaadadssad'
+      }
       steps {
         build(job: 'tst_2', propagate: true)
       }
     }
+  }
+  environment {
+    p1 = 'p'
   }
 }
