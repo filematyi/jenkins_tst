@@ -32,14 +32,9 @@ pipeline {
         archiveArtifacts(artifacts: '*.jar', fingerprint: true)
       }
     }
-    stage('Build Job') {
-      environment {
-        string_parameter = '13'
-      }
+    stage('Build a joba') {
       steps {
-        sh 'export string_parameter=10'
-        build 'tst_2'
-        sh 'env'
+        build(job: 'tst_2', propagate: true)
       }
     }
   }
