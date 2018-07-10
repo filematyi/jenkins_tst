@@ -38,7 +38,7 @@ pipeline {
         string_parameter = 'aassaadadssad'
       }
       steps {
-        build(job: 'tst_2', propagate: true)
+        build 'tst_2'
       }
     }
   }
