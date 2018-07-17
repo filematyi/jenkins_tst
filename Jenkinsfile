@@ -38,8 +38,9 @@ pipeline {
         string_parameter = 'aassaadadssad'
       }
       steps {
-        build 'tst_2'
         sh 'echo $string_parameter'
+        build 'tst_2'
+        sh 'echo $p1'
       }
     }
   }
