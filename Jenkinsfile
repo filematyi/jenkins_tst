@@ -39,6 +39,7 @@ pipeline {
       }
       steps {
         build 'tst_2'
+        sh 'echo $string_parameter'
       }
     }
   }
