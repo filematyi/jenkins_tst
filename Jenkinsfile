@@ -38,7 +38,7 @@ pipeline {
         string_parameter = 'aassaadadssad'
       }
       steps {
-        build(job: 'tst_2', string_parameter : $p1)
+        build(job: 'tst_2', parameters: [[$class: 'StringParameterValue', name: 'string_parameter', value: p1]])
         sh 'echo $string_parameter'
       }
     }
